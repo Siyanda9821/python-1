@@ -43,3 +43,6 @@ sign = input("Enter the sign:")
 
 for i in range(rows + 1):
     print(i * sign)
+
+a = 22
+b = a / 4
