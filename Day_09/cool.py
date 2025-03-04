@@ -1,6 +1,3 @@
-import keyword
-
-
 def to_upper_case(text):
     """_summary_
 
@@ -15,5 +12,4 @@ def to_upper_case(text):
 
 if __name__ == "__main__":
     print(to_upper_case("sya"))
-
-print(keyword.kwlist)
+print(__name__)
