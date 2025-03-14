@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Stats Preview Card Component</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: #0a0c1b;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card {
+      display: flex;
+      max-width: 1000px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .left {
+      background-color: #1c1938;
+      padding: 60px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .right {
+      position: relative;
+      width: 50%;
+    }
+
+    .right::before {
+      content: "";
+      position: absolute;
+      background-image: url("images/image-header-mobile.jpg");
+      background-size: cover;
+      background-position: center;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .right::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(104, 0, 209, 0.6);
+      mix-blend-mode: multiply;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      line-height: 1.2;
+    }
+
+    h1 span {
+      color: #aa5cdb;
+    }
+
+    .description {
+      font-size: 15px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 60px;
+      max-width: 400px;
+    }
+
+    .stats-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 60px;
+    }
+
+    .stat-item {
+      margin-right: 30px;
+    }
+
+    .stat-item:last-child {
+      margin-right: 0;
+    }
+
+    .stat-number {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .stat-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.6);
+      letter-spacing: 1px;
+      font-family: "Inter", sans-serif;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        flex-direction: column-reverse;
+        max-width: 400px;
+      }
+
+      .left,
+      .right {
+        width: 100%;
+      }
+
+      .left {
+        padding: 40px 30px;
+        text-align: center;
+      }
+
+      .right {
+        height: 250px;
+      }
+
+      .description {
+        margin-bottom: 30px;
+        max-width: unset;
+      }
+
+      .stats-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .stat-item {
+        margin: 0 0 20px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <section class="left">
+      <div class="content">
+        <h1>Get <span>insights</span> that help your business grow.</h1>
+        <p class="description">
+          Discover the benefits of data analytics and make better decisions regarding revenue, customer
+          experience, and overall efficiency.
+        </p>
+      </div>
+
+      <div class="stats-container">
+        <div class="stat-item">
+          <p class="stat-number">10k+</p>
+          <p class="stat-title">companies</p>
+        </div>
+
+        <div class="stat-item">
+          <p class="stat-number">314</p>
+          <p class="stat-title">templates</p>
+        </div>
+
+        <div class="stat-item">
+          <p class="stat-number">12M+</p>
+          <p class="stat-title">queries</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="right">
+      <!-- Image is handled via CSS background -->
+    </section>
+  </main>
+</body>
+
+</html>

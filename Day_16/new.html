@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Insights</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0a0c1b;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #1c1938;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .left {
+      padding: 60px 40px;
+    }
+
+    .heading {
+      color: white;
+      font-size: 32px;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      font-weight: 700;
+    }
+
+    .heading span {
+      color: #a65ad7;
+    }
+
+    .description {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 60px;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .metric-item {
+      list-style-type: none;
+    }
+
+    .metric-value {
+      color: white;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .metric-label {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .right {
+      position: relative;
+    }
+
+    .image-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("image-header-desktop.jpg");
+      /* Placeholder image */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(166, 90, 215, 0.5);
+      mix-blend-mode: multiply;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+      }
+
+      .left {
+        padding: 40px 30px;
+        order: 2;
+        text-align: center;
+      }
+
+      .right {
+        order: 1;
+        height: 250px;
+      }
+
+      .metrics {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .heading {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="card">
+    <div class="left">
+      <h1 class="heading">
+        Get <span>insights</span> that help your business grow.
+      </h1>
+
+      <p class="description">
+        Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and
+        overall efficiency.
+      </p>
+
+      <div class="metrics">
+        <div class="metric-item">
+          <p class="metric-value">10k+</p>
+          <p class="metric-label">Companies</p>
+        </div>
+
+        <div class="metric-item">
+          <p class="metric-value">314</p>
+          <p class="metric-label">Templates</p>
+        </div>
+
+        <div class="metric-item">
+          <p class="metric-value">12M+</p>
+          <p class="metric-label">Queries</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="image-container"></div>
+      <div class="overlay"></div>
+    </div>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  #col {
+    color: aqua
+  }
+
+  .col {
+    color: white
+  }
+
+  p {
+    color: crimson;
+  }
+
+  p {
+    color: orange;
+  }
+
+  div {
+    text-decoration: solid;
+  }
+
+  /* class selector are preferred over element selectors */
+  /* Id is has more preference of class selectors - id cannot be used multiple times as this can cause problems with js */
+  /* Inline style> */
+  /* !important */
+
+
+  /* The last css statements takes preference   */
+</style>
+
+
+<body>
+
+  <ol>
+    <li>!Important</li>
+    <li>Inline</li>
+    <li>Id</li>
+    <div>
+      <li>class</li>
+      <li>element selector</li>
+    </div>
+
+
+  </ol>
+  <p class="col" id="col">This is cool</p>
+</body>
+
+</html>
