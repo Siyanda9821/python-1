@@ -14,8 +14,44 @@
   <style>
     header {
       color: hsl(236, 13%, 42%);
-      display: inline;
+      display: flex;
+      margin-right: 80px;
 
+    }
+
+    .logo {
+      margin-right: 50px;
+    }
+
+    .links {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .mid-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      ;
+    }
+
+    .button-container {
+      background-color: hsl(5, 85%, 63%);
+      justify-content: center;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .num {
+      color: hsl(5, 85%, 63%);
+
+    }
+
+    .card {
+      display: flex;
+      /* grid-template-columns: 1fr 1fr; */
     }
   </style>
 </head>
@@ -23,50 +59,70 @@
 <body>
 
   <header>
-
-    <p>Home</p>
-    <p>New</p>
-    <p>Popular</p>
-    <p>Trending</p>
-    <p>Categories</p>
+    <h1 class="logo">W.</h1>
+    <div class="links">
+      <p>Home</p>
+      <p>New</p>
+      <p>Popular</p>
+      <p>Trending</p>
+      <p>Categories</p>
+    </div>
   </header>
+  <div class="image">
 
-  <div>
-    <h1>The Bright Future of Web 3.0?</h1>
+    <img src="/Day_18/news-homepage-main/news-homepage-main/assets/images/image-web-3-desktop.jpg" alt="">
   </div>
+  <section class="mid-section">
 
-  <div class="description">
-    <p>
-      We dive into the next evolution of the web that claims to put the power of the platforms back
-      into the hands of the
-      people.
-      But is it really fulfilling its promise?
-    </p>
+    <div>
+      <h1>The Bright Future of Web 3.0?</h1>
+    </div>
 
-    <h3 class="button">Read more</h3>
+    <div class="description">
+      <p>
+        We dive into the next evolution of the web that claims to put the power of the platforms back
+        into the hands of the
+        people.
+        But is it really fulfilling its promise?
+      </p>
+
+      <div class="button-container">
+        <h3 class="button">Read more</h3>
+      </div>
+
+  </section>
+
   </div>
 
 
   <section class="cards-container">
 
 
-    <div class="card-1">
-      <h3 class="num-1">01</h3>
-      <h2 class="heading-1">Reviving Retro PCs</h2>
-      What happens when old PCs are given modern upgrades?
+    <div class="card">
+      <img src="assets/images/image-retro-pcs.jpg" alt="">
+
+      <div class="description2">
+        <h3 class="num">01</h3>
+        <h2 class="heading-1">Reviving Retro PCs</h2>
+        What happens when old PCs are given modern upgrades?
+      </div>
     </div>
-    <div class="card-2">
-
-      <h3 class="num-2">02</h3>
-      <h2 class="heading-2">Top 10 Laptops of 2022</h2>
-      Our best picks for various needs and budgets.
+    <div class="card">
+      <img src="assets/images/image-top-laptops.jpg" alt="">
+      <div class="description2">
+        <h3 class="num">02</h3>
+        <h2 class="heading-2">Top 10 Laptops of 2022</h2>
+        Our best picks for various needs and budgets.
+      </div>
     </div>
 
-    <div class="card-3">
-
-      <h3 class="num-3">03</h3>
-      <h2 class="heading-3">The Growth of Gaming</h2>
-      How the pandemic has sparked fresh opportunities.
+    <div class="card">
+      <img src="assets/images/image-gaming-growth.jpg" alt="">
+      <div class="description2">
+        <h3 class="num">03</h3>
+        <h2 class="heading-3">The Growth of Gaming</h2>
+        How the pandemic has sparked fresh opportunities.
+      </div>
     </div>
 
   </section>
