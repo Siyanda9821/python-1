@@ -9,55 +9,166 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
   <title>Frontend Mentor | News homepage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    header {
-      color: hsl(236, 13%, 42%);
-      display: flex;
-      margin-right: 80px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
 
+    body {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: "Inter", sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      padding: 20px 0;
+      color: hsl(236, 13%, 42%);
+      margin-right: 80px;
     }
 
     .logo {
       margin-right: 50px;
+      font-size: 36px;
+      font-weight: bold;
+      color: #000;
+      font-family: serif;
     }
 
     .links {
       display: flex;
-      justify-content: flex-end;
+      gap: 30px;
+      cursor: pointer;
+    }
+
+    .links p:hover {
+      color: hsl(5, 85%, 63%);
+    }
+
+    .image {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .image img {
+      width: 100%;
+      height: auto;
     }
 
     .mid-section {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      ;
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .mid-section h1 {
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1.1;
+      font-family: "Inter", sans-serif;
+
+    }
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .description p {
+      color: hsl(236, 13%, 42%);
+      line-height: 1.6;
+      margin-bottom: 30px;
     }
 
     .button-container {
       background-color: hsl(5, 85%, 63%);
-      justify-content: center;
+      display: inline-block;
+      padding: 12px 30px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      cursor: pointer;
+      width: 70%;
+
+    }
+
+
+
+    .button {
+      color: black;
+      font-weight: bold;
+      margin: 0;
     }
 
     .cards-container {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .num {
-      color: hsl(5, 85%, 63%);
-
+      gap: 30px;
     }
 
     .card {
       display: flex;
-      /* grid-template-columns: 1fr 1fr; */
+      gap: 20px;
+    }
+
+    .card img {
+      width: 100px;
+      height: 130px;
+      object-fit: cover;
+    }
+
+    .description2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .num {
+      color: hsl(5, 85%, 63%);
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .description2 h3 {
+      font-size: 18px;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+
+    .description2 h3:hover {
+      color: hsl(5, 85%, 63%);
+    }
+
+    .description2 p {
+      color: hsl(236, 13%, 42%);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+
+      .mid-section,
+      .cards-container {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
 <body>
-
   <header>
     <h1 class="logo">W.</h1>
     <div class="links">
@@ -68,12 +179,13 @@
       <p>Categories</p>
     </div>
   </header>
+
   <div class="image">
-
-    <img src="/Day_18/news-homepage-main/news-homepage-main/assets/images/image-web-3-desktop.jpg" alt="">
+    <img src="/Day_18/news-homepage-main/news-homepage-main/assets/images/image-web-3-desktop.jpg"
+      alt="Web 3.0 Illustration">
   </div>
-  <section class="mid-section">
 
+  <section class="mid-section">
     <div>
       <h1>The Bright Future of Web 3.0?</h1>
     </div>
@@ -81,54 +193,44 @@
     <div class="description">
       <p>
         We dive into the next evolution of the web that claims to put the power of the platforms back
-        into the hands of the
-        people.
+        into the hands of the people.
         But is it really fulfilling its promise?
       </p>
 
       <div class="button-container">
         <h3 class="button">Read more</h3>
       </div>
-
+    </div>
   </section>
-
-  </div>
-
 
   <section class="cards-container">
-
-
     <div class="card">
-      <img src="assets/images/image-retro-pcs.jpg" alt="">
-
+      <img src="assets/images/image-retro-pcs.jpg" alt="Retro PCs">
       <div class="description2">
-        <h3 class="num">01</h3>
-        <h2 class="heading-1">Reviving Retro PCs</h2>
-        What happens when old PCs are given modern upgrades?
-      </div>
-    </div>
-    <div class="card">
-      <img src="assets/images/image-top-laptops.jpg" alt="">
-      <div class="description2">
-        <h3 class="num">02</h3>
-        <h2 class="heading-2">Top 10 Laptops of 2022</h2>
-        Our best picks for various needs and budgets.
+        <h2 class="num">01</h2>
+        <h3 class="heading-1">Reviving Retro PCs</h3>
+        <p>What happens when old PCs are given modern upgrades?</p>
       </div>
     </div>
 
     <div class="card">
-      <img src="assets/images/image-gaming-growth.jpg" alt="">
+      <img src="assets/images/image-top-laptops.jpg" alt="Top Laptops">
       <div class="description2">
-        <h3 class="num">03</h3>
-        <h2 class="heading-3">The Growth of Gaming</h2>
-        How the pandemic has sparked fresh opportunities.
+        <h2 class="num">02</h2>
+        <h3 class="heading-2">Top 10 Laptops of 2022</h3>
+        <p>Our best picks for various needs and budgets.</p>
       </div>
     </div>
 
+    <div class="card">
+      <img src="assets/images/image-gaming-growth.jpg" alt="Gaming Growth">
+      <div class="description2">
+        <h2 class="num">03</h2>
+        <h3 class="heading-3">The Growth of Gaming</h3>
+        <p>How the pandemic has sparked fresh opportunities.</p>
+      </div>
+    </div>
   </section>
-
-
-
 </body>
 
 </html>
