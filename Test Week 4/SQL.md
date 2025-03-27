@@ -44,8 +44,37 @@ INSERT INTO artworks (artwork_id, title, artist_id, genre, price) VALUES
 
 1.  Write a query to list all artworks where the title contains 'Night', sorted by title in ascending order.
 
+```sql
+SELECT title
+FROM artworks
+WHERE title LIKE '%Night%'
+ORDER BY title ASC;
+```
+
 1.  Write a query to display each artist with the total number of artworks they have created, including artists with no artworks, sorted in descending order by the artwork count.
+
+```sql
+SELECT a.name, COUNT(w.artwork_id) AS artwork_count
+FROM artists a
+LEFT JOIN artworks w ON a.artist_id = w.artist_id
+GROUP BY a.artist_id, a.name
+ORDER BY artwork_count DESC;
+```
 
 1.  Write a query to display the average price of artworks for each genre, only including genres where the average price is above 800000, sorted by genre name.
 
-1.  Write a query to list all artists who do not have any artworks in the artworks table.
+```sql
+SELECT genre, AVG(price) AS av_price
+FROM artworks
+GROUP BY genre
+WHERE AVG(price) > 800000
+ORDER BY genre;
+```
+
+5.  Write a query to list all artists who do not have any artworks in the artworks table.
+
+```sql
+SELECT name
+FROM artists
+WHERE artist_id NOT IN (SELECT DISTINCT artist_id FROM artworks);
+```
